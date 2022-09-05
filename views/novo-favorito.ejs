@@ -1,0 +1,30 @@
+<%- include('header') %>
+    <h2>Adicione um novo favorito</h2>
+    <form method="post" role="form">
+        <div class="mb-3">
+            <label for="title"><h6>Título</h6></label>
+            <input type="text" class="form-control" id="titulo"
+                   name="titulo" placeholder="Título" required>
+        </div>
+        <div class="mb-3">
+            <label for="detalhes"><h6>Detalhes</h6></label>
+            <textarea class="form-control" id="detalhes" name="detalhes"
+                      placeholder="Detalhe o favorito nesse campo"
+                      rows="10" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="link"><h6>Link</h6></label>
+            <input type="text" class="form-control" id="link"
+                   name="link" placeholder="Informe o link do favorito" required>
+        </div>
+        <div class="mb-3">
+            <label for="categoria"><h6>Categoria</h6></label>
+            <input type="text" class="form-control" id="categoria"
+                   name="categoria" placeholder="Informe a categoria do favorito nesse campo" required>
+        </div>
+        <div class="mb-3">
+            <input type="submit" value="Adicionar" class="btn btn-primary">
+        </div>
+        <div class="col-3"><a href="/" class="btn btn-primary btn-sm">Voltar a Home</a></div>
+    </form>
+<%- include('footer') %>

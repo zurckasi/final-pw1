@@ -1,0 +1,26 @@
+<%- include('header') %> 
+<%indice = 0%>
+<% if (favoritos.length) { %> 
+  <div>
+  <% for (const favorite of favoritos) { %>
+    <div class="card m-1 p-0 mx-auto" style="width: 20rem">
+      <div class="card-body">
+        <h5><a class="card-header h2 m-1 p-2" href="/detalhesdofavorito/<%= favorite.titulo%>"><%= favorite.titulo %></a></h5>
+        <a class="m-2 p-0" href="<%= favorite.link %>">Link do favorito</a>
+        <a class="text-muted m-0 p-0" href="/findcat/<%= favorite.categoria %>"><%= favorite.categoria %></a>
+      </div>
+        <a href="/detalhesdofavorito/<%= favorite.titulo %>" >
+          <input type="button" value="Detalhamento" id="<%indice%>" class="btn btn-primary">
+        </a>
+    </div>
+    <%indice++%>
+    <p><%= indice %></p>
+  <% } %>
+  </div>
+  <div>
+    <p class="display-6 text-center">Bem-vindo! 
+      <% if(favoritos.length > 1) { %> <%=(favoritos.length)%> favoritos foram publicados.</p>
+        <% } else { %> 1 visitante publicou um favorito</p><% } %> 
+  </div>
+<% } else { %> Sem favoritos! <a href="/adicionar">Adicione um favorito agora mesmo</a>
+<% } %> <%- include('footer') %>

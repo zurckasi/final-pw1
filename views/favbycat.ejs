@@ -1,0 +1,18 @@
+<%- include('header') %> 
+<% if (favoriteByCategory.length) { %> 
+  <div>
+  <% for (const favorite of favoriteByCategory) { %>
+    <div class="card m-1 p-0 mx-auto" style="width: 20rem">
+      <div class="card-body">
+        <h5><a class="card-header h2 m-1 p-2" href="./detalhes"><%= favorite.titulo %></a></h5>
+        <a class="m-2 p-0" href="<%= favorite.link %>">Link do favorito</a>
+        <a class="text-muted m-0 p-0" href=""><%= favorite.categoria %></a>
+      </div>
+        <a href="./infopost" >
+          <input type="button" value="Detalhamento" id="<%indice%>" class="btn btn-primary">
+        </a>
+        <div class="col-3"><a href="/" class="btn btn-primary btn-sm">Voltar a Home</a></div>
+    </div>
+  <% } %>
+  </div>
+<% } %> <%- include('footer') %>
