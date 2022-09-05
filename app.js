@@ -72,5 +72,5 @@ app.use((request, response) => {
 });
 
 app.listen(port ,() => {
-  console.log(`API rodando na porta ${port}`);
+  console.log(`API rodando na porta 3000`);
 });
