@@ -4,7 +4,7 @@ const path = require("path");
 const express = require("express");
 const Favorito = require("./model/favorito");
 const bodyParser = require("body-parser");
-const port = process.env.API_PORT || 3000;
+const port = 3000;
 const app = express();
 app.use(express.json());
 
