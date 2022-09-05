@@ -2,7 +2,7 @@
   "name": "avf-pw1",
   "version": "1.0.0",
   "description": "AvaliacaoFinalPW12022.1",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
