@@ -4,7 +4,7 @@ const path = require("path");
 const express = require("express");
 const Favorito = require("./model/favorito");
 const bodyParser = require("body-parser");
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(express.json());
 
@@ -71,6 +71,6 @@ app.use((request, response) => {
     response.status(404).render('404');
 });
 
-app.listen(port ,() => {
-  console.log(`API rodando na porta 3000`);
+app.listen(PORT ,() => {
+  console.log(`API rodando na porta ${PORT}`);
 });
